@@ -41,14 +41,11 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Props
+  - name: Environment
     uniqueID: 1298923693
     locked: 0
   - name: Character
     uniqueID: 3794057965
-    locked: 0
-  - name: Tree
-    uniqueID: 3510804983
     locked: 0
   m_RenderingLayers:
   - Default

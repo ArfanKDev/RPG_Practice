@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - PlayerFeet
   layers:
   - Default
   - TransparentFX
@@ -41,11 +42,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Environment
-    uniqueID: 1298923693
+  - name: BackGround
+    uniqueID: 3534042971
     locked: 0
-  - name: Character
-    uniqueID: 3794057965
+  - name: World
+    uniqueID: 1336754509
+    locked: 0
+  - name: ForeGround
+    uniqueID: 357752559
+    locked: 0
+  - name: Ground
+    uniqueID: 348980935
     locked: 0
   m_RenderingLayers:
   - Default

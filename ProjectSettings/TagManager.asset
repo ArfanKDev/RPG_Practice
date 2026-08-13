@@ -51,7 +51,7 @@ TagManager:
   - name: ForeGround
     uniqueID: 357752559
     locked: 0
-  - name: Ground
+  - name: UI
     uniqueID: 348980935
     locked: 0
   m_RenderingLayers:

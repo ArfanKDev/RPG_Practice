@@ -1,31 +1,10 @@
 fileFormatVersion: 2
-guid: 634d88ea9b00df548b6d001066d50688
+guid: 1544671d73b6315418b0487dba424419
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6215267202064938543
-    second: Tree1_0
-  - first:
-      213: -5597570988121575489
-    second: Tree1_1
-  - first:
-      213: 542723386359573843
-    second: Tree1_2
-  - first:
-      213: 3940409226945107963
-    second: Tree1_3
-  - first:
-      213: -9130447484784962851
-    second: Tree1_4
-  - first:
-      213: 9050774589780060452
-    second: Tree1_5
-  - first:
-      213: -4024382073413787549
-    second: Tree1_6
-  - first:
-      213: 8143098205146776124
-    second: Tree1_7
+      213: -37184506250915966
+    second: CastleAssets_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +51,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -95,8 +74,8 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureFormat: 4
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -134,177 +113,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tree1_0
+      name: Ground 1_0
       rect:
         serializedVersion: 2
-        x: 36
-        y: 14
-        width: 121
-        height: 192
+        x: 31
+        y: 524
+        width: 84
+        height: 43
       alignment: 9
-      pivot: {x: 0.5025537, y: 0.05921917}
+      pivot: {x: 0.53511286, y: 0.17094812}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f2677332790114650800000000000000
-      internalID: 6215267202064938543
+      spriteID: 0c43c2637b81fa6469e8b76c1fdc8c8d
+      internalID: -1728099832
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tree1_1
+      name: Ground 1_1
       rect:
         serializedVersion: 2
-        x: 229
-        y: 14
-        width: 121
-        height: 192
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 146
+        y: 525
+        width: 125
+        height: 171
+      alignment: 9
+      pivot: {x: 0.509989, y: 0.05876712}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fbf2bffe7de6152b0800000000000000
-      internalID: -5597570988121575489
+      spriteID: 0700672acdd2498428906f911ca7346f
+      internalID: 408462631
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tree1_2
+      name: Ground 1_2
       rect:
         serializedVersion: 2
-        x: 422
-        y: 14
-        width: 121
-        height: 192
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 284
+        y: 523
+        width: 120
+        height: 168
+      alignment: 9
+      pivot: {x: 0.509989, y: 0.05876712}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 35d624f5b04288700800000000000000
-      internalID: 542723386359573843
+      spriteID: 54461c11987c74e44aee809e2a41f4c2
+      internalID: -857047682
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tree1_3
+      name: Ground 1_3
       rect:
         serializedVersion: 2
-        x: 614
-        y: 14
-        width: 121
-        height: 192
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 421
+        y: 526
+        width: 110
+        height: 164
+      alignment: 9
+      pivot: {x: 0.5108995, y: 0.037560813}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bf71cb190552fa630800000000000000
-      internalID: 3940409226945107963
+      spriteID: 409fe298ec513894f9bb37f207747fd4
+      internalID: -217814855
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tree1_4
+      name: Ground 1_4
       rect:
         serializedVersion: 2
-        x: 805
-        y: 14
-        width: 121
-        height: 192
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 15
+        y: 567
+        width: 119
+        height: 119
+      alignment: 9
+      pivot: {x: 0.51773363, y: -0.26511773}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: dd2980543622a4180800000000000000
-      internalID: -9130447484784962851
+      spriteID: 920f585de4cdff04db8a25c9de820e07
+      internalID: -1450662313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tree1_5
+      name: Ground 1_5
       rect:
         serializedVersion: 2
-        x: 997
-        y: 14
-        width: 121
-        height: 192
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 901
+        y: 456
+        width: 52
+        height: 56
+      alignment: 9
+      pivot: {x: 0.49999765, y: 0.061727796}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 429e8fd498fca9d70800000000000000
-      internalID: 9050774589780060452
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tree1_6
-      rect:
-        serializedVersion: 2
-        x: 1188
-        y: 14
-        width: 121
-        height: 192
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 360a8b983d58628c0800000000000000
-      internalID: -4024382073413787549
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tree1_7
-      rect:
-        serializedVersion: 2
-        x: 1380
-        y: 14
-        width: 121
-        height: 192
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c3205e07ca8120170800000000000000
-      internalID: 8143098205146776124
+      spriteID: 90461ef9e01d7fb4a9b3283f6d200158
+      internalID: -1397803209
       vertices: []
       indices: 
       edges: []
@@ -313,7 +248,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3455ae62c99f9a84386160a9c6c14932
+    spriteID: 65ac2e3fecc9fe54db7da7fd6d10a9bd
     internalID: 0
     vertices: []
     indices: 
@@ -321,16 +256,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1536.0,"y":1024.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Tree1_0: 6215267202064938543
-      Tree1_1: -5597570988121575489
-      Tree1_2: 542723386359573843
-      Tree1_3: 3940409226945107963
-      Tree1_4: -9130447484784962851
-      Tree1_5: 9050774589780060452
-      Tree1_6: -4024382073413787549
-      Tree1_7: 8143098205146776124
+      Ground 1_0: -1728099832
+      Ground 1_1: 408462631
+      Ground 1_2: -857047682
+      Ground 1_3: -217814855
+      Ground 1_4: -1450662313
+      Ground 1_5: -1397803209
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

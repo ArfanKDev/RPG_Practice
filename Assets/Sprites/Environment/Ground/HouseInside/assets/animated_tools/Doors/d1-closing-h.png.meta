@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: fd720eeb3e355674fb35effef930ea12
+guid: 1a1f5d06e45404d45b2bfc8b79011c4a
 AssetOrigin:
   serializedVersion: 1
   productId: 340276
   packageName: Epic RPG World - Free House Interiors
   packageVersion: 1.0
-  assetPath: Assets/RafaelMatos/ERW - Village(interiors)/assets/animations/doors-d1-opening-h.png
+  assetPath: Assets/RafaelMatos/ERW - Village(interiors)/assets/animations/doors-d1-closing-h.png
   uploadId: 846012
 TextureImporter:
   internalIDToNameTable: []
@@ -130,221 +130,221 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: doors-d1-opening-h_0
+      name: doors-d1-closing-h_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.26542348}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6bb7bced7f0e5b4c8d06647323b4448
-      internalID: -393356437
+      spriteID: c7bef7513bd57954caffbde1d6bc3cce
+      internalID: -2146175015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors-d1-opening-h_1
+      name: doors-d1-closing-h_1
       rect:
         serializedVersion: 2
         x: 160
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2654235}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b37fc2c1dad88bf4a8184339b05890fa
-      internalID: -1946425429
+      spriteID: 0c1731e55eba5d24888b4f96c5474c63
+      internalID: 1282173019
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors-d1-opening-h_2
+      name: doors-d1-closing-h_2
       rect:
         serializedVersion: 2
         x: 320
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2654235}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc90e062db7388348894ef7ea65ac3c6
-      internalID: -1800905668
+      spriteID: c0b996dd19c8b264d8b86f00212688ec
+      internalID: -1531268810
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors-d1-opening-h_3
+      name: doors-d1-closing-h_3
       rect:
         serializedVersion: 2
         x: 480
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2654235}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 948dc88fa3527ff49862912e53fa4259
-      internalID: 88548727
+      spriteID: f33abdd78873225478ff54d998d82176
+      internalID: 222882723
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors-d1-opening-h_4
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 160
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b0a7101f1033f64088c3d6dab51cb1a
-      internalID: 1636947442
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: doors-d1-opening-h_5
+      name: doors-d1-closing-h_5
       rect:
         serializedVersion: 2
         x: 800
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2654235}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bafd1ad09833f04c8a346b9b4a9f921
-      internalID: -1621475955
+      spriteID: c29a549d2db1f8e48a0a7344cf23460f
+      internalID: 1827302518
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors-d1-opening-h_6
+      name: doors-d1-closing-h_6
       rect:
         serializedVersion: 2
         x: 960
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2654235}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17608237b94a0ce40815cba6aa963054
-      internalID: -779143748
+      spriteID: fbc69928a31c32b45a3baaa948a2f762
+      internalID: 2099605225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors-d1-opening-h_7
+      name: doors-d1-closing-h_7
       rect:
         serializedVersion: 2
         x: 1120
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2654235}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc43d66d185d8384ca44c0b50d1ad064
-      internalID: -1979428030
+      spriteID: 2d1b5e7b1624695408b4906aab74c952
+      internalID: -372886126
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors-d1-opening-h_8
+      name: doors-d1-closing-h_8
       rect:
         serializedVersion: 2
         x: 1280
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2654235}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9446051006de1b046871e88f5034d2da
-      internalID: 151253486
+      spriteID: 416847e318a5dbe4fbbc9079ed5409ff
+      internalID: 1481338404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors-d1-opening-h_9
+      name: doors-d1-closing-h_9
       rect:
         serializedVersion: 2
         x: 1440
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2654235}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9bdf7b40d683684e96af1037e59db65
-      internalID: -65991027
+      spriteID: 7fde0e79c816ef84792086f82d9c4bab
+      internalID: -1409863004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doors-d1-closing-h_4
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2654235}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0355428dda87627489f6047e802e63f6
+      internalID: 1183015499
       vertices: []
       indices: 
       edges: []
@@ -361,18 +361,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.2654235064983368},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      doors-d1-opening-h_0: -393356437
-      doors-d1-opening-h_1: -1946425429
-      doors-d1-opening-h_2: -1800905668
-      doors-d1-opening-h_3: 88548727
-      doors-d1-opening-h_4: 1636947442
-      doors-d1-opening-h_5: -1621475955
-      doors-d1-opening-h_6: -779143748
-      doors-d1-opening-h_7: -1979428030
-      doors-d1-opening-h_8: 151253486
-      doors-d1-opening-h_9: -65991027
+      doors-d1-closing-h_0: -2146175015
+      doors-d1-closing-h_1: 1282173019
+      doors-d1-closing-h_10: 563616430
+      doors-d1-closing-h_11: 1170316827
+      doors-d1-closing-h_2: -1531268810
+      doors-d1-closing-h_3: 222882723
+      doors-d1-closing-h_4: 1183015499
+      doors-d1-closing-h_5: 1827302518
+      doors-d1-closing-h_6: 2099605225
+      doors-d1-closing-h_7: -372886126
+      doors-d1-closing-h_8: 1481338404
+      doors-d1-closing-h_9: -1409863004
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -130,37 +130,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: doors-d2-opening-h_0
+      name: d2-opening-h_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e8f09554ffeff04f8e858536959dca5
-      internalID: 766524554
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: doors-d2-opening-h_1
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 160
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2582137}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -174,177 +152,199 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors-d2-opening-h_2
+      name: d2-opening-h_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2582137}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cce670f38a6e0541bbce39d95355941
+      internalID: 761062495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d2-opening-h_2
       rect:
         serializedVersion: 2
         x: 320
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2582137}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c32246df72b2fc4eb56ef2cb2039d82
-      internalID: 1039486970
+      spriteID: 186620b9bbf4dc14bb456be9d16ed6ca
+      internalID: 1855593308
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors-d2-opening-h_3
+      name: d2-opening-h_3
       rect:
         serializedVersion: 2
         x: 480
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2582137}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9118e4a92df06d640a77d4a512937cff
-      internalID: 1201123374
+      spriteID: 75d79d66592097d49adbe7cda60ff579
+      internalID: 1674706537
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors-d2-opening-h_4
+      name: d2-opening-h_4
       rect:
         serializedVersion: 2
         x: 640
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2582137}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e93ee54beda7644da20e6ad261e0141
-      internalID: 295409005
+      spriteID: c7b70d03002672c4bb8af9d03f273724
+      internalID: 1936121672
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors-d2-opening-h_5
+      name: d2-opening-h_5
       rect:
         serializedVersion: 2
         x: 800
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2582137}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f98a9758f56d97a4d9dd4e55174b4297
-      internalID: -1539619780
+      spriteID: 1041787ea58f7c44ebe8c82620897484
+      internalID: 1272105555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors-d2-opening-h_6
+      name: d2-opening-h_6
       rect:
         serializedVersion: 2
         x: 960
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2582137}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c9f85ffc5d866f4dbd62843e3f89351
-      internalID: 1632444835
+      spriteID: f2a2d6c168d26e34e9ee9d2a89103795
+      internalID: 286418731
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors-d2-opening-h_7
+      name: d2-opening-h_7
       rect:
         serializedVersion: 2
         x: 1120
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2582137}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b5074f9fafdf324791b2a04c6240181
-      internalID: 1160873368
+      spriteID: d0480e92c2fb74e4aad637254f921817
+      internalID: -1462685413
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors-d2-opening-h_8
+      name: d2-opening-h_8
       rect:
         serializedVersion: 2
         x: 1280
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2582137}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5be840b12b5c8f14c91346ee3ea47072
-      internalID: -660283492
+      spriteID: 8c4ba3ce966342e4aa5c8b1a05a92562
+      internalID: -1838572821
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors-d2-opening-h_9
+      name: d2-opening-h_9
       rect:
         serializedVersion: 2
         x: 1440
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2582137}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0a19a12fd3ae6044be8040b44e4fc4e
-      internalID: -1218784525
+      spriteID: 95f80ce84d243c74a82986f0f4cd9462
+      internalID: -1429231772
       vertices: []
       indices: 
       edges: []
@@ -363,8 +363,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      d2-opening-h_0: 1879655657
+      d2-opening-h_1: 761062495
+      d2-opening-h_2: 1855593308
+      d2-opening-h_3: 1674706537
+      d2-opening-h_4: 1936121672
+      d2-opening-h_5: 1272105555
+      d2-opening-h_6: 286418731
+      d2-opening-h_7: -1462685413
+      d2-opening-h_8: -1838572821
+      d2-opening-h_9: -1429231772
       doors-d2-opening-h_0: 766524554
-      doors-d2-opening-h_1: 1879655657
       doors-d2-opening-h_2: 1039486970
       doors-d2-opening-h_3: 1201123374
       doors-d2-opening-h_4: 295409005

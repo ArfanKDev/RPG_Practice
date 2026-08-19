@@ -130,243 +130,243 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: doors-d2-closing-v_0
+      name: d2-closing-v_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.021262031}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1f4c6ceb5dda354580ab4c8bc0a189f
-      internalID: -744439754
+      spriteID: 925948c4bb63d994a8ee1493dbabcf5e
+      internalID: -121237871
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors-d2-closing-v_1
+      name: d2-closing-v_1
       rect:
         serializedVersion: 2
         x: 160
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.021262031}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 461792d269990824aab8f97bab99086c
-      internalID: -1648633142
+      spriteID: ec6bb05f92eb23c42b15be1d9b23fd65
+      internalID: -1519601324
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors-d2-closing-v_2
+      name: d2-closing-v_2
       rect:
         serializedVersion: 2
         x: 320
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.021262031}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4873a87b048e65749bc9eee762b4852e
-      internalID: -399189857
+      spriteID: 530ef927f6cfb764b9b918400f3dbbd3
+      internalID: -1568591927
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors-d2-closing-v_3
+      name: d2-closing-v_3
       rect:
         serializedVersion: 2
         x: 480
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.021262031}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93c484bbb1bea69498562c5ad5700577
-      internalID: -1592373506
+      spriteID: f9c0f85c9458bd940a990c2d109dcf27
+      internalID: -1766199029
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors-d2-closing-v_4
+      name: d2-closing-v_4
       rect:
         serializedVersion: 2
         x: 640
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.021262031}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 622abb7567876b9498d8622fed5d960e
-      internalID: -156428253
+      spriteID: fb965ab5cc51ebb4e997897e0f78b336
+      internalID: 630331001
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors-d2-closing-v_5
+      name: d2-closing-v_5
       rect:
         serializedVersion: 2
         x: 800
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.021262031}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5898bdb536934c345b1f092a799ccf10
-      internalID: -1484813356
+      spriteID: fdf046e46e0c6194badd1e2dbe79a393
+      internalID: 798925369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors-d2-closing-v_6
+      name: d2-closing-v_6
       rect:
         serializedVersion: 2
         x: 960
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.021262031}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13418a5043f0a784189d824c31a37f75
-      internalID: 281550007
+      spriteID: 99471c175eb0e024aaa1633c93e5ee08
+      internalID: -1395132357
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors-d2-closing-v_7
+      name: d2-closing-v_7
       rect:
         serializedVersion: 2
         x: 1120
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.021262031}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9719e37ac36615947a0b60ee200701da
-      internalID: 1000379768
+      spriteID: 98e7e5bc12d4fec44b68e6e3bb5326c9
+      internalID: 1428108939
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors-d2-closing-v_8
+      name: d2-closing-v_8
       rect:
         serializedVersion: 2
         x: 1280
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.021262031}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d73219a8fd78def4cbdb669b574933db
-      internalID: -722001857
+      spriteID: 9e0feea6d4275db47b083c07d9cd36a5
+      internalID: -1983955618
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors-d2-closing-v_9
+      name: d2-closing-v_9
       rect:
         serializedVersion: 2
         x: 1440
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.021262031}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb404e18c47a8d64f83c4c810ced7a7a
-      internalID: 2073583244
+      spriteID: 1e0c5dca89b617f419a01eaf99f00d16
+      internalID: -221572359
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors-d2-closing-v_10
+      name: d2-closing-v_10
       rect:
         serializedVersion: 2
         x: 1600
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.021262031}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c437688f3ba7c04e8be841d687ec4fe
-      internalID: -794876955
+      spriteID: 3fc5dc77d836f0b43895cf1a10faee54
+      internalID: 1429545564
       vertices: []
       indices: 
       edges: []
@@ -385,6 +385,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      d2-closing-v_0: -121237871
+      d2-closing-v_1: -1519601324
+      d2-closing-v_10: 1429545564
+      d2-closing-v_2: -1568591927
+      d2-closing-v_3: -1766199029
+      d2-closing-v_4: 630331001
+      d2-closing-v_5: 798925369
+      d2-closing-v_6: -1395132357
+      d2-closing-v_7: 1428108939
+      d2-closing-v_8: -1983955618
+      d2-closing-v_9: -221572359
       doors-d2-closing-v_0: -744439754
       doors-d2-closing-v_1: -1648633142
       doors-d2-closing-v_10: -794876955

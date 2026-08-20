@@ -133,12 +133,12 @@ TextureImporter:
       name: decors_weapon2_4_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 15
-        width: 11
-        height: 37
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -147,6 +147,28 @@ TextureImporter:
       bones: []
       spriteID: 1166fd19b0a1b8c4c863425da612fe27
       internalID: -846156864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: decors_weapon2_4_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d5de3dc8e4427240bdda6c58cf1ed6e
+      internalID: -689070055
       vertices: []
       indices: 
       edges: []
@@ -163,9 +185,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       decors_weapon2_4_0: -846156864
+      decors_weapon2_4_1: -689070055
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

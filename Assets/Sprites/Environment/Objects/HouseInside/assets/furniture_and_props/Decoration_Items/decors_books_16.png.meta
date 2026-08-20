@@ -133,12 +133,12 @@ TextureImporter:
       name: decors_books_16_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 5
-        width: 8
-        height: 11
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -147,50 +147,6 @@ TextureImporter:
       bones: []
       spriteID: 512156afda80b8b4384bf293a3bb587a
       internalID: -1665073159
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: decors_books_16_1
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 5
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f87b4504a5f22374c964023421e2ad01
-      internalID: 362358935
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: decors_books_16_2
-      rect:
-        serializedVersion: 2
-        x: 21
-        y: 5
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7cc8718d066460042988c343e043283a
-      internalID: 1036226375
       vertices: []
       indices: 
       edges: []
@@ -207,11 +163,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       decors_books_16_0: -1665073159
-      decors_books_16_1: 362358935
-      decors_books_16_2: 1036226375
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

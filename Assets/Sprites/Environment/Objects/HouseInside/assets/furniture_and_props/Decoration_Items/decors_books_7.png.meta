@@ -133,12 +133,12 @@ TextureImporter:
       name: decors_books_7_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 13
-        width: 8
-        height: 11
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -147,28 +147,6 @@ TextureImporter:
       bones: []
       spriteID: 5f88a66314c5ccd42959e62dc22f0dfd
       internalID: -93911082
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: decors_books_7_1
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 3
-        width: 8
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9dd1cf74d74c52e44ace41c1d599f11b
-      internalID: -1590737071
       vertices: []
       indices: 
       edges: []
@@ -185,10 +163,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       decors_books_7_0: -93911082
-      decors_books_7_1: -1590737071
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

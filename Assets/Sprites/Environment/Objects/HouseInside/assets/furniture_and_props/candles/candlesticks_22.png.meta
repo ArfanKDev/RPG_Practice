@@ -133,10 +133,10 @@ TextureImporter:
       name: candlesticks_22_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 1
-        width: 21
-        height: 15
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,28 +147,6 @@ TextureImporter:
       bones: []
       spriteID: f8614967791781543b3f9cc269fb4e65
       internalID: -1466976867
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: candlesticks_22_1
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 9
-        width: 3
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7bc6cfe216ff624e9a9bb8a1b6ff894
-      internalID: -1598410452
       vertices: []
       indices: 
       edges: []
@@ -185,10 +163,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       candlesticks_22_0: -1466976867
-      candlesticks_22_1: -1598410452
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

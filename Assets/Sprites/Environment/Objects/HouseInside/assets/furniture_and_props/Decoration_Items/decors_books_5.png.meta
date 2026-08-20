@@ -133,12 +133,12 @@ TextureImporter:
       name: decors_books_5_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 4
-        width: 6
-        height: 12
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -147,94 +147,6 @@ TextureImporter:
       bones: []
       spriteID: 6f471020b704a8d47958fcbf376bcf3a
       internalID: 1298904109
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: decors_books_5_1
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 4
-        width: 6
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 63fa0567477a9eb4ea8c79da7d0e0707
-      internalID: 641323819
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: decors_books_5_2
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 4
-        width: 6
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3939da5b19cae01479837a1600dc10ca
-      internalID: 520470501
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: decors_books_5_3
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 4
-        width: 6
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b5a337286de3f2d49be85b27e7019499
-      internalID: 403834082
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: decors_books_5_4
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 4
-        width: 6
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 384bc305b1b9b7c4a9ac68cfe6b93946
-      internalID: 1609166064
       vertices: []
       indices: 
       edges: []
@@ -251,13 +163,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       decors_books_5_0: 1298904109
-      decors_books_5_1: 641323819
-      decors_books_5_2: 520470501
-      decors_books_5_3: 403834082
-      decors_books_5_4: 1609166064
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -79,6 +79,22 @@ void Start()
                if (!floorCells.Contains(rightCell))
                wallTilemaps.SetTile(rightCell, rightWallTiles);
 
+            //    =========
+            // corners
+            if (!floorCells.Contains(topCell) && !floorCells.Contains(leftCell))
+                wallTilemaps.SetTile(topCell + Vector3Int.left, topLeftCornerWalltiles);
+
+            if (!floorCells.Contains(topCell) && !floorCells.Contains(rightCell))
+                wallTilemaps.SetTile(topCell + Vector3Int.right, topRightCornerWalltiles);  
+
+            if (!floorCells.Contains(bottomCell) && !floorCells.Contains(leftCell))     
+                wallTilemaps.SetTile(bottomCell + Vector3Int.left, bottomLeftCornerWalltiles);
+
+            if (!floorCells.Contains(bottomCell) && !floorCells.Contains(rightCell))
+                wallTilemaps.SetTile(bottomCell + Vector3Int.right, bottomRightCornerWalltiles);    
+
+                
+
         
  
         }

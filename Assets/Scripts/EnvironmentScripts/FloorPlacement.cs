@@ -25,6 +25,7 @@ public class FloorPlacement : MonoBehaviour
 
      [Header("Special Wall Tiles")]
      [SerializeField] private TileBase bottomCenterTile;
+     [SerializeField] private TileBase bottomInnerTile;
 
      [Header("Preview")]
     [SerializeField] private Camera mainCamera;
@@ -199,13 +200,59 @@ public class FloorPlacement : MonoBehaviour
         {
             wallTilemap.SetTile(topRight, innerTopRightCorner);
         }
-        // bottom left inner corner
-        if (floorTilemap.HasTile(down) &&
-            floorTilemap.HasTile(left) &&
-            !floorTilemap.HasTile(bottomLeft))
-        {
-            wallTilemap.SetTile(bottomLeft, innerBottomLeftCorner);
-        }
+
+       // Inner Bottom-Left Corner
+   if (floorTilemap.HasTile(floorCell + Vector3Int.down) &&
+    floorTilemap.HasTile(floorCell + Vector3Int.left) &&
+    !floorTilemap.HasTile(floorCell + new Vector3Int(-1, -1, 0)))
+   {
+    Vector3Int cornerCell =
+        floorCell + new Vector3Int(-1, -1, 0);
+
+    // Agar corner ke top, left aur right par floor hai,
+    // to special tile use hogi.
+    bool hasFloorTop =
+        floorTilemap.HasTile(cornerCell + Vector3Int.up);
+
+    bool hasFloorLeft =
+        floorTilemap.HasTile(cornerCell + Vector3Int.left);
+
+    bool hasFloorRight =
+        floorTilemap.HasTile(cornerCell + Vector3Int.right);
+
+    if (hasFloorTop && hasFloorLeft && hasFloorRight)
+    {
+        wallTilemap.SetTile(
+            cornerCell,
+            bottomCenterTile
+        );
+    }
+    else
+    {
+        wallTilemap.SetTile(
+            cornerCell,
+            innerBottomLeftCorner
+        );
+    }
+    if (hasFloorTop && hasFloorLeft && hasFloorRight)
+   {
+    // Special tile
+    wallTilemap.SetTile(cornerCell, bottomCenterTile);
+
+    // Special tile ke neeche wali tamam tiles
+    Vector3Int belowCell = cornerCell + Vector3Int.down;
+
+    while (wallTilemap.HasTile(belowCell))
+    {
+        wallTilemap.SetTile(belowCell, bottomInnerTile);
+
+        belowCell += Vector3Int.down;
+    }
+    
+  }
+}
+
+
         // bottom right inner corner
         if (floorTilemap.HasTile(down) &&
             floorTilemap.HasTile(right) &&
@@ -213,6 +260,8 @@ public class FloorPlacement : MonoBehaviour
         {
             wallTilemap.SetTile(bottomRight, innerBottomRightCorner);
         }
+
+       
     }
 }
 

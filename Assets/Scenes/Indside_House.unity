@@ -11060,6 +11060,8 @@ MonoBehaviour:
   innerBottomRightCorner: {fileID: 11400000, guid: 5c0904570f7dd4544a2f452806246d0d, type: 2}
   bottomCenterTile: {fileID: 11400000, guid: 1f1c4d9ae74243d4182ea74cf9eeaffc, type: 2}
   bottomInnerTile: {fileID: 11400000, guid: 1c9d2a40df3b88849a2da5fa7c85f803, type: 2}
+  topCenterTile: {fileID: 11400000, guid: 4372ab0aec7171d478379478ede05ba2, type: 2}
+  topInnerTile: {fileID: 11400000, guid: e23ff22dcfcf81f4ebec752a6e778b70, type: 2}
   mainCamera: {fileID: 1396921201}
   grid: {fileID: 756512985}
   previewTilemap: {fileID: 322042657}

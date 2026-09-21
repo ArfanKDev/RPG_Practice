@@ -26,6 +26,8 @@ public class FloorPlacement : MonoBehaviour
      [Header("Special Wall Tiles")]
      [SerializeField] private TileBase bottomCenterTile;
      [SerializeField] private TileBase bottomInnerTile;
+     [SerializeField] private TileBase topCenterTile;
+     [SerializeField] private TileBase topInnerTile;
 
      [Header("Preview")]
     [SerializeField] private Camera mainCamera;
@@ -187,12 +189,47 @@ public class FloorPlacement : MonoBehaviour
         // =================================
 
         //  top left inner corner
-        if (floorTilemap.HasTile(up) &&
-            floorTilemap.HasTile(left) &&
-            !floorTilemap.HasTile(topLeft))
-        {
-            wallTilemap.SetTile(topLeft, innerTopLeftCorner);
-        }
+        if (floorTilemap.HasTile(floorCell + Vector3Int.up) && 
+        floorTilemap.HasTile(floorCell + Vector3Int.left) &&
+        !floorTilemap.HasTile(floorCell + new Vector3Int(-1, 1, 0)))
+            {
+                Vector3Int cornerCell = floorCell + new Vector3Int(-1, 1, 0);
+
+                // Agar corner ke bottom, left aur right par floor hai ya nahe
+                bool hasFloorBottom = floorTilemap.HasTile(cornerCell + Vector3Int.down);
+                bool hasFloorLeft = floorTilemap.HasTile(cornerCell + Vector3Int.left);
+                bool hasFloorRight = floorTilemap.HasTile(cornerCell + Vector3Int.right);
+
+             if (hasFloorBottom && hasFloorLeft && hasFloorRight)
+                {
+                  wallTilemap.SetTile(cornerCell, topCenterTile);  
+                }
+                else
+                {
+                    wallTilemap.SetTile(cornerCell, innerTopLeftCorner);
+                }
+
+                if (hasFloorBottom && hasFloorLeft && hasFloorRight)
+                {
+                    // Special tile
+                    wallTilemap.SetTile(cornerCell, topCenterTile);
+
+                    // Special tile ke up wali tamam tiles
+                    Vector3Int aboveCell = cornerCell + Vector3Int.up;
+                  
+
+                    while (!floorTilemap.HasTile(aboveCell))
+                    {
+                        wallTilemap.SetTile(aboveCell, topInnerTile);
+
+                        aboveCell += Vector3Int.up;
+                    }
+                }
+
+
+            }
+
+
         //  top right inner corner
         if (floorTilemap.HasTile(up) &&
             floorTilemap.HasTile(right) &&

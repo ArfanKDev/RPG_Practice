@@ -9,6 +9,7 @@ public class FloorPlacement : MonoBehaviour
     [SerializeField] private TileBase bottomWallTile;
     [SerializeField] private TileBase leftWallTile;
     [SerializeField] private TileBase rightWallTile;
+    [SerializeField] private TileBase topInnerWallTile;
 
     [Header("Wall Corners")]
     [SerializeField] private TileBase topLeftCorner;
@@ -22,11 +23,11 @@ public class FloorPlacement : MonoBehaviour
     [SerializeField] private TileBase innerBottomLeftCorner;
     [SerializeField] private TileBase innerBottomRightCorner;
 
-    [Header("Special Wall Tiles")]
-    [SerializeField] private TileBase bottomCenterTile;
-    [SerializeField] private TileBase bottomInnerTile;
-    [SerializeField] private TileBase topCenterTile;
-    [SerializeField] private TileBase topInnerTile;
+    // [Header("Special Wall Tiles")]
+    // [SerializeField] private TileBase bottomCenterTile;
+    // [SerializeField] private TileBase bottomInnerTile;
+    // [SerializeField] private TileBase topCenterTile;
+    // [SerializeField] private TileBase topInnerTile;
 
     [Header("Preview")]
     [SerializeField] private Camera mainCamera;
@@ -260,16 +261,39 @@ public class FloorPlacement : MonoBehaviour
                 continue;
 
 
-            // TOP
-            if (!floorTilemap.HasTile(
-                floorCell + Vector3Int.up))
-            {
-                TryPlaceWall(
-                    floorCell + Vector3Int.up,
-                    topWallTile
-                );
-            }
+           // TOP
+if (!floorTilemap.HasTile(
+    floorCell + Vector3Int.up))
+{
+     // Floor ke bilkul upar wali wall
+    Vector3Int wallCell1 =
+        floorCell + Vector3Int.up;
 
+    // Uske upar
+    Vector3Int wallCell2 =
+        floorCell + new Vector3Int(0, 2, 0);
+
+    // Sab se upar
+    Vector3Int wallCell3 =
+        floorCell + new Vector3Int(0, 3, 0);
+
+
+    // Wall ki 3 cells
+    wallTilemap.SetTile(
+        wallCell1,
+        topInnerWallTile
+    );
+
+    wallTilemap.SetTile(
+        wallCell2,
+        topInnerWallTile
+    );
+
+    wallTilemap.SetTile(
+        wallCell3,
+        topWallTile
+    );
+}
 
             // BOTTOM
             if (!floorTilemap.HasTile(
@@ -331,11 +355,11 @@ public class FloorPlacement : MonoBehaviour
 
             Vector3Int topLeft =
                 floorCell +
-                new Vector3Int(-1, 1, 0);
+                new Vector3Int(-1, 3, 0);
 
             Vector3Int topRight =
                 floorCell +
-                new Vector3Int(1, 1, 0);
+                new Vector3Int(1, 3, 0);
 
             Vector3Int bottomLeft =
                 floorCell +
@@ -347,31 +371,39 @@ public class FloorPlacement : MonoBehaviour
 
 
             // =================================================
-            // OUTER TOP LEFT
-            // =================================================
+// OUTER TOP LEFT
+// =================================================
 
-            if (!floorTilemap.HasTile(up) &&
-                !floorTilemap.HasTile(left))
-            {
-                wallTilemap.SetTile(
-                    topLeft,
-                    topLeftCorner
-                );
-            }
+if (!floorTilemap.HasTile(up) &&
+    !floorTilemap.HasTile(left))
+{
+    wallTilemap.SetTile(topLeft, topLeftCorner);
+
+    // Corner aur left wall ke beech ka gap fill karo
+    Vector3Int gapCell1 = floorCell + new Vector3Int(-1, 1, 0);
+    Vector3Int gapCell2 = floorCell + new Vector3Int(-1, 2, 0);
+
+    wallTilemap.SetTile(gapCell1, leftWallTile);
+    wallTilemap.SetTile(gapCell2, leftWallTile);
+ }
 
 
-            // =================================================
-            // OUTER TOP RIGHT
-            // =================================================
+// =================================================
+// OUTER TOP RIGHT
+// =================================================
 
-            if (!floorTilemap.HasTile(up) &&
-                !floorTilemap.HasTile(right))
-            {
-                wallTilemap.SetTile(
-                    topRight,
-                    topRightCorner
-                );
-            }
+if (!floorTilemap.HasTile(up) &&
+    !floorTilemap.HasTile(right))
+{
+    wallTilemap.SetTile(topRight, topRightCorner);
+
+    // Corner aur right wall ke beech ka gap fill karo
+    Vector3Int gapCell1 = floorCell + new Vector3Int(1, 1, 0);
+    Vector3Int gapCell2 = floorCell + new Vector3Int(1, 2, 0);
+
+    wallTilemap.SetTile(gapCell1, rightWallTile);
+    wallTilemap.SetTile(gapCell2, rightWallTile);
+}
 
 
             // =================================================
@@ -400,70 +432,44 @@ public class FloorPlacement : MonoBehaviour
                     bottomRightCorner
                 );
             }
+// =================================================
+// INNER TOP LEFT
+// =================================================
+
+Vector3Int diagTopLeft = floorCell + new Vector3Int(-1, 1, 0);
+
+if (floorTilemap.HasTile(up) &&
+    floorTilemap.HasTile(left) &&
+    !floorTilemap.HasTile(diagTopLeft))
+{
+    Vector3Int cornerCell = floorCell + new Vector3Int(-1, 3, 0);
+    Vector3Int innerWallCell1 = floorCell + new Vector3Int(-1, 1, 0);
+    Vector3Int innerWallCell2 = floorCell + new Vector3Int(-1, 2, 0);
+
+    wallTilemap.SetTile(cornerCell, innerTopLeftCorner);
+    wallTilemap.SetTile(innerWallCell1, topInnerWallTile);
+    wallTilemap.SetTile(innerWallCell2, topInnerWallTile);
+}
 
 
-            // =================================================
-            // INNER TOP LEFT
-            // =================================================
+// =================================================
+// INNER TOP RIGHT
+// =================================================
 
-            if (floorTilemap.HasTile(up) &&
-                floorTilemap.HasTile(left) &&
-                !floorTilemap.HasTile(topLeft))
-            {
-                Vector3Int cornerCell =
-                    topLeft;
+Vector3Int diagTopRight = floorCell + new Vector3Int(1, 1, 0);
 
-                bool hasFloorBottom =
-                    floorTilemap.HasTile(
-                        cornerCell +
-                        Vector3Int.down
-                    );
+if (floorTilemap.HasTile(up) &&
+    floorTilemap.HasTile(right) &&
+    !floorTilemap.HasTile(diagTopRight))
+{
+    Vector3Int cornerCell = floorCell + new Vector3Int(1, 3, 0);
+    Vector3Int innerWallCell1 = floorCell + new Vector3Int(1, 1, 0);
+    Vector3Int innerWallCell2 = floorCell + new Vector3Int(1, 2, 0);
 
-                bool hasFloorLeft =
-                    floorTilemap.HasTile(
-                        cornerCell +
-                        Vector3Int.left
-                    );
-
-                bool hasFloorRight =
-                    floorTilemap.HasTile(
-                        cornerCell +
-                        Vector3Int.right
-                    );
-
-
-                if (hasFloorBottom &&
-                    hasFloorLeft &&
-                    hasFloorRight)
-                {
-                    wallTilemap.SetTile(
-                        cornerCell,
-                        topCenterTile
-                    );
-                }
-                else
-                {
-                    wallTilemap.SetTile(
-                        cornerCell,
-                        innerTopLeftCorner
-                    );
-                }
-            }
-
-
-            // =================================================
-            // INNER TOP RIGHT
-            // =================================================
-
-            if (floorTilemap.HasTile(up) &&
-                floorTilemap.HasTile(right) &&
-                !floorTilemap.HasTile(topRight))
-            {
-                wallTilemap.SetTile(
-                    topRight,
-                    innerTopRightCorner
-                );
-            }
+    wallTilemap.SetTile(cornerCell, innerTopRightCorner);
+    wallTilemap.SetTile(innerWallCell1, topInnerWallTile);
+    wallTilemap.SetTile(innerWallCell2, topInnerWallTile);
+}
 
 
             // =================================================
@@ -474,63 +480,8 @@ public class FloorPlacement : MonoBehaviour
                 floorTilemap.HasTile(left) &&
                 !floorTilemap.HasTile(bottomLeft))
             {
-                Vector3Int cornerCell =
-                    bottomLeft;
-
-                bool hasFloorTop =
-                    floorTilemap.HasTile(
-                        cornerCell +
-                        Vector3Int.up
+                wallTilemap.SetTile(bottomLeft, innerBottomLeftCorner
                     );
-
-                bool hasFloorLeft =
-                    floorTilemap.HasTile(
-                        cornerCell +
-                        Vector3Int.left
-                    );
-
-                bool hasFloorRight =
-                    floorTilemap.HasTile(
-                        cornerCell +
-                        Vector3Int.right
-                    );
-
-
-                if (hasFloorTop &&
-                    hasFloorLeft &&
-                    hasFloorRight)
-                {
-                    wallTilemap.SetTile(
-                        cornerCell,
-                        bottomCenterTile
-                    );
-
-
-                    Vector3Int belowCell =
-                        cornerCell +
-                        Vector3Int.down;
-
-
-                    while (
-                        wallTilemap.HasTile(
-                            belowCell))
-                    {
-                        wallTilemap.SetTile(
-                            belowCell,
-                            bottomInnerTile
-                        );
-
-                        belowCell +=
-                            Vector3Int.down;
-                    }
-                }
-                else
-                {
-                    wallTilemap.SetTile(
-                        cornerCell,
-                        innerBottomLeftCorner
-                    );
-                }
             }
 
 
@@ -548,7 +499,7 @@ public class FloorPlacement : MonoBehaviour
                 );
             }
         }
-    }
+        }
 
 
     // =========================================================

@@ -327,6 +327,7 @@ if (!floorTilemap.HasTile(
                 );
             }
         }
+    
 
 
         // =====================================================
@@ -377,18 +378,34 @@ if (!floorTilemap.HasTile(
 if (!floorTilemap.HasTile(up) &&
     !floorTilemap.HasTile(left))
 {
+   
     wallTilemap.SetTile(topLeft, topLeftCorner);
 
-    // Corner aur left wall ke beech ka gap fill karo
-    Vector3Int gapCell1 = floorCell + new Vector3Int(-1, 1, 0);
-    Vector3Int gapCell2 = floorCell + new Vector3Int(-1, 2, 0);
+    Vector3Int gapCell1 = floorCell + new Vector3Int(-1, 2, 0);
+    Vector3Int gapCell2 = floorCell + new Vector3Int(-1, 1, 0);
 
-    wallTilemap.SetTile(gapCell1, leftWallTile);
-    wallTilemap.SetTile(gapCell2, leftWallTile);
+    Vector3Int gapCell1Left = gapCell1 + Vector3Int.left;   // khaali check
+    bool gapCell1LeftIsEmpty = !floorTilemap.HasTile(gapCell1Left) && !wallTilemap.HasTile(gapCell1Left);
+
+    if (gapCell1LeftIsEmpty)
+    {
+        wallTilemap.SetTile(gapCell1, leftWallTile);
+    }
+
+    Vector3Int gapCell2Left = gapCell2 + Vector3Int.left;   // khaali check
+    bool leftIsEmpty = !floorTilemap.HasTile(gapCell2Left) && !wallTilemap.HasTile(gapCell2Left);
+
+    if (leftIsEmpty)
+    {
+        wallTilemap.SetTile(gapCell2, leftWallTile);
+    }
+    
+
+    
  }
 
 
-// =================================================
+     // =================================================
 // OUTER TOP RIGHT
 // =================================================
 
@@ -397,12 +414,24 @@ if (!floorTilemap.HasTile(up) &&
 {
     wallTilemap.SetTile(topRight, topRightCorner);
 
-    // Corner aur right wall ke beech ka gap fill karo
-    Vector3Int gapCell1 = floorCell + new Vector3Int(1, 1, 0);
-    Vector3Int gapCell2 = floorCell + new Vector3Int(1, 2, 0);
+    Vector3Int gapCell1 = floorCell + new Vector3Int(1, 2, 0);
+    Vector3Int gapCell2 = floorCell + new Vector3Int(1, 1, 0);
 
-    wallTilemap.SetTile(gapCell1, rightWallTile);
-    wallTilemap.SetTile(gapCell2, rightWallTile);
+    Vector3Int gapCell1Right = gapCell1 + Vector3Int.right;   // khaali check
+    bool gapCell1RightIsEmpty = !floorTilemap.HasTile(gapCell1Right) && !wallTilemap.HasTile(gapCell1Right);
+
+    if (gapCell1RightIsEmpty)
+    {
+        wallTilemap.SetTile(gapCell1, rightWallTile);
+    }
+
+    Vector3Int gapCell2Right = gapCell2 + Vector3Int.right;   // khaali check
+    bool rightIsEmpty = !floorTilemap.HasTile(gapCell2Right) && !wallTilemap.HasTile(gapCell2Right);
+
+    if (rightIsEmpty)
+    {
+        wallTilemap.SetTile(gapCell2, rightWallTile);
+    }
 }
 
 
@@ -499,7 +528,12 @@ if (floorTilemap.HasTile(up) &&
                 );
             }
         }
-        }
+
+
+    }
+
+
+
 
 
     // =========================================================

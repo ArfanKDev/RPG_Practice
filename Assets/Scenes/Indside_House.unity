@@ -11245,12 +11245,18 @@ MonoBehaviour:
   backWallTilemap: {fileID: 0}
   frontWallTilemap: {fileID: 0}
   boundaryWallTilemap: {fileID: 0}
-  boundaryWallTile: {fileID: 0}
   topWallTile: {fileID: 11400000, guid: ca64b560080a960428baa64fff30be84, type: 2}
   bottomWallTile: {fileID: 11400000, guid: c91338c84aac29c479d13f62b984cb98, type: 2}
   leftWallTile: {fileID: 11400000, guid: 084f060d01d6fc9429dc8be10a2170a8, type: 2}
   rightWallTile: {fileID: 11400000, guid: f7938882132eb384db947705faac71d4, type: 2}
   topInnerWallTile: {fileID: 0}
+  leftBorderTile: {fileID: 0}
+  rightBorderTile: {fileID: 0}
+  bottomBorderTile: {fileID: 0}
+  bottomLeftInnerBorderCorner: {fileID: 0}
+  bottomRightInnerBorderCorner: {fileID: 0}
+  bottomLeftOuterBorderCorner: {fileID: 0}
+  bottomRightOuterBorderCorner: {fileID: 0}
   topLeftCorner: {fileID: 11400000, guid: 0e8efbe9fd0ac2d40852402e738f8690, type: 2}
   topRightCorner: {fileID: 11400000, guid: 231d6e4a6a4f6574fbcda5ccb68077dc, type: 2}
   bottomLeftCorner: {fileID: 11400000, guid: a96dfe6d4a99cd64e9c61a03cde48d85, type: 2}
@@ -16308,12 +16314,18 @@ MonoBehaviour:
   backWallTilemap: {fileID: 798087247}
   frontWallTilemap: {fileID: 177589432}
   boundaryWallTilemap: {fileID: 898369352}
-  boundaryWallTile: {fileID: 11400000, guid: 4ade5215f193f024989e3d6f56c994f4, type: 2}
   topWallTile: {fileID: 11400000, guid: fe3e8bd4fa2b08b4b82307067645d458, type: 2}
   bottomWallTile: {fileID: 11400000, guid: 252c5d1727783ba4983831c586f2bf3f, type: 2}
   leftWallTile: {fileID: 11400000, guid: 747bfc64c7dc65046941ecf0c7052a81, type: 2}
   rightWallTile: {fileID: 11400000, guid: 3d51ce91ba7a3ac40afa46864d0bf3a9, type: 2}
   topInnerWallTile: {fileID: 11400000, guid: d5ed79a37c3d57646a713ee906bc0147, type: 2}
+  leftBorderTile: {fileID: 11400000, guid: cdb0e7c137acdac409a507d58979e432, type: 2}
+  rightBorderTile: {fileID: 11400000, guid: 80e8b53e5a1d63e40bd8837d6db6a228, type: 2}
+  bottomBorderTile: {fileID: 11400000, guid: 6a454164f89b69943b2f3ab9006dd2f2, type: 2}
+  bottomLeftInnerBorderCorner: {fileID: 11400000, guid: 3a0f7454ef70242419eca85009f24b96, type: 2}
+  bottomRightInnerBorderCorner: {fileID: 11400000, guid: 9720ab75207043a4481e3985b89d8030, type: 2}
+  bottomLeftOuterBorderCorner: {fileID: 11400000, guid: d4ea7040ffe7b3747b47493c03952f73, type: 2}
+  bottomRightOuterBorderCorner: {fileID: 11400000, guid: 015c95411f93b5b4ea94ec2474606164, type: 2}
   topLeftCorner: {fileID: 11400000, guid: d4f6c17f571ef5c42bc9542de2b48335, type: 2}
   topRightCorner: {fileID: 11400000, guid: df1be54030c5717458102a98c80f92e5, type: 2}
   bottomLeftCorner: {fileID: 11400000, guid: b71af3b56dabd8f4c81a7c3edd90ec24, type: 2}

@@ -7,13 +7,22 @@ public class FloorPlacement : MonoBehaviour
     [SerializeField] private Tilemap backWallTilemap;
     [SerializeField] private Tilemap frontWallTilemap;
     [SerializeField] private Tilemap boundaryWallTilemap;
-
-    [SerializeField] private TileBase boundaryWallTile;
     [SerializeField] private TileBase topWallTile;
     [SerializeField] private TileBase bottomWallTile;
     [SerializeField] private TileBase leftWallTile;
     [SerializeField] private TileBase rightWallTile;
     [SerializeField] private TileBase topInnerWallTile;
+
+    [Header("Boundary Wall")]
+
+    [SerializeField] private TileBase leftBorderTile;
+    [SerializeField] private TileBase rightBorderTile;
+    [SerializeField] private TileBase bottomBorderTile;
+    [SerializeField] private TileBase bottomLeftInnerBorderCorner;
+    [SerializeField] private TileBase bottomRightInnerBorderCorner;
+    [SerializeField] private TileBase bottomLeftOuterBorderCorner;
+    [SerializeField] private TileBase bottomRightOuterBorderCorner;
+
 
     [Header("Wall Corners")]
     [SerializeField] private TileBase topLeftCorner;
@@ -309,7 +318,7 @@ if (!floorTilemap.HasTile(
                 // Boundary wall
                 boundaryWallTilemap.SetTile(
                     floorCell + Vector3Int.down,
-                    boundaryWallTile
+                    bottomBorderTile
                 );
             }
         }
@@ -327,18 +336,20 @@ foreach (Vector3Int floorCell in bounds.allPositionsWithin)
     Vector3Int leftCell = floorCell + Vector3Int.left;
 
     if (!floorTilemap.HasTile(leftCell) &&
-        !frontWallTilemap.HasTile(leftCell))
+        !frontWallTilemap.HasTile(leftCell) && !backWallTilemap.HasTile(leftCell))
     {
-        backWallTilemap.SetTile(leftCell, leftWallTile);
+      frontWallTilemap.SetTile(leftCell, leftWallTile);
+      boundaryWallTilemap.SetTile(leftCell, leftBorderTile);
     }
 
     // RIGHT
     Vector3Int rightCell = floorCell + Vector3Int.right;
 
     if (!floorTilemap.HasTile(rightCell) &&
-        !frontWallTilemap.HasTile(rightCell))
+        !frontWallTilemap.HasTile(rightCell) && !backWallTilemap.HasTile(rightCell))
     {
-        backWallTilemap.SetTile(rightCell, rightWallTile);
+        frontWallTilemap.SetTile(rightCell, rightWallTile);
+        boundaryWallTilemap.SetTile(rightCell, rightBorderTile);
     }
 }
     
@@ -386,7 +397,7 @@ foreach (Vector3Int floorCell in bounds.allPositionsWithin)
 
 
             // =================================================
-// OUTER TOP LEFT
+// OUTER TOP LEFT corner & gap wall
 // =================================================
 
 if (!floorTilemap.HasTile(up) &&
@@ -411,7 +422,9 @@ if (!floorTilemap.HasTile(up) &&
 
     if (leftIsEmpty)
     {
-        backWallTilemap.SetTile(gapCell2, leftWallTile);
+        frontWallTilemap.SetTile(gapCell2, leftWallTile);
+        boundaryWallTilemap.SetTile(gapCell2, leftBorderTile);
+        
     }
     
 
@@ -420,7 +433,7 @@ if (!floorTilemap.HasTile(up) &&
 
 
      // =================================================
-// OUTER TOP RIGHT
+// OUTER TOP RIGHT corner & gap wall
 // =================================================
 
 if (!floorTilemap.HasTile(up) &&
@@ -444,7 +457,8 @@ if (!floorTilemap.HasTile(up) &&
 
     if (rightIsEmpty)
     {
-        backWallTilemap.SetTile(gapCell2, rightWallTile);
+        frontWallTilemap.SetTile(gapCell2, rightWallTile);
+        boundaryWallTilemap.SetTile(gapCell2, rightBorderTile);
     }
 }
 
@@ -456,10 +470,11 @@ if (!floorTilemap.HasTile(up) &&
             if (!floorTilemap.HasTile(down) &&
                 !floorTilemap.HasTile(left))
             {
-                backWallTilemap.SetTile(
+                frontWallTilemap.SetTile(
                     bottomLeft,
                     bottomLeftCorner
                 );
+                boundaryWallTilemap.SetTile(bottomLeft, bottomLeftOuterBorderCorner);
             }
 
 
@@ -470,10 +485,11 @@ if (!floorTilemap.HasTile(up) &&
             if (!floorTilemap.HasTile(down) &&
                 !floorTilemap.HasTile(right))
             {
-                backWallTilemap.SetTile(
+                frontWallTilemap.SetTile(
                     bottomRight,
                     bottomRightCorner
                 );
+                boundaryWallTilemap.SetTile(bottomRight, bottomRightOuterBorderCorner);
             }
 // =================================================
 // INNER TOP LEFT
@@ -525,6 +541,7 @@ if (floorTilemap.HasTile(up) &&
             {
                 frontWallTilemap.SetTile(bottomLeft, innerBottomLeftCorner
                     );
+                    boundaryWallTilemap.SetTile(bottomLeft, bottomLeftInnerBorderCorner);
             }
 
 
@@ -540,6 +557,7 @@ if (floorTilemap.HasTile(up) &&
                     bottomRight,
                     innerBottomRightCorner
                 );
+                boundaryWallTilemap.SetTile(bottomRight, bottomRightInnerBorderCorner);
             }
         }
 

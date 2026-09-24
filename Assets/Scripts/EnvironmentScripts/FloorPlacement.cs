@@ -4,12 +4,25 @@ using UnityEngine.Tilemaps;
 public class FloorPlacement : MonoBehaviour
 {
     [Header("Walls")]
-    [SerializeField] private Tilemap wallTilemap;
+    [SerializeField] private Tilemap backWallTilemap;
+    [SerializeField] private Tilemap frontWallTilemap;
+    [SerializeField] private Tilemap boundaryWallTilemap;
     [SerializeField] private TileBase topWallTile;
     [SerializeField] private TileBase bottomWallTile;
     [SerializeField] private TileBase leftWallTile;
     [SerializeField] private TileBase rightWallTile;
     [SerializeField] private TileBase topInnerWallTile;
+
+    [Header("Boundary Wall")]
+
+    [SerializeField] private TileBase leftBorderTile;
+    [SerializeField] private TileBase rightBorderTile;
+    [SerializeField] private TileBase bottomBorderTile;
+    [SerializeField] private TileBase bottomLeftInnerBorderCorner;
+    [SerializeField] private TileBase bottomRightInnerBorderCorner;
+    [SerializeField] private TileBase bottomLeftOuterBorderCorner;
+    [SerializeField] private TileBase bottomRightOuterBorderCorner;
+
 
     [Header("Wall Corners")]
     [SerializeField] private TileBase topLeftCorner;
@@ -22,12 +35,6 @@ public class FloorPlacement : MonoBehaviour
     [SerializeField] private TileBase innerTopRightCorner;
     [SerializeField] private TileBase innerBottomLeftCorner;
     [SerializeField] private TileBase innerBottomRightCorner;
-
-    // [Header("Special Wall Tiles")]
-    // [SerializeField] private TileBase bottomCenterTile;
-    // [SerializeField] private TileBase bottomInnerTile;
-    // [SerializeField] private TileBase topCenterTile;
-    // [SerializeField] private TileBase topInnerTile;
 
     [Header("Preview")]
     [SerializeField] private Camera mainCamera;
@@ -240,11 +247,16 @@ public class FloorPlacement : MonoBehaviour
 
     private void PlaceWall()
     {
-        if (wallTilemap == null ||
-            floorTilemap == null)
+        if (backWallTilemap == null ||
+            floorTilemap == null ||
+            boundaryWallTilemap == null ||
+            frontWallTilemap == null)
             return;
 
-        wallTilemap.ClearAllTiles();
+        backWallTilemap.ClearAllTiles();
+        frontWallTilemap.ClearAllTiles();
+        boundaryWallTilemap.ClearAllTiles();
+
 
         BoundsInt bounds =
             floorTilemap.cellBounds;
@@ -279,17 +291,17 @@ if (!floorTilemap.HasTile(
 
 
     // Wall ki 3 cells
-    wallTilemap.SetTile(
+    backWallTilemap.SetTile(
         wallCell1,
         topInnerWallTile
     );
 
-    wallTilemap.SetTile(
+    backWallTilemap.SetTile(
         wallCell2,
         topInnerWallTile
     );
 
-    wallTilemap.SetTile(
+    backWallTilemap.SetTile(
         wallCell3,
         topWallTile
     );
@@ -299,34 +311,48 @@ if (!floorTilemap.HasTile(
             if (!floorTilemap.HasTile(
                 floorCell + Vector3Int.down))
             {
-                TryPlaceWall(
+                frontWallTilemap.SetTile(
                     floorCell + Vector3Int.down,
                     bottomWallTile
                 );
-            }
-
-
-            // LEFT
-            if (!floorTilemap.HasTile(
-                floorCell + Vector3Int.left))
-            {
-                TryPlaceWall(
-                    floorCell + Vector3Int.left,
-                    leftWallTile
-                );
-            }
-
-
-            // RIGHT
-            if (!floorTilemap.HasTile(
-                floorCell + Vector3Int.right))
-            {
-                TryPlaceWall(
-                    floorCell + Vector3Int.right,
-                    rightWallTile
+                // Boundary wall
+                boundaryWallTilemap.SetTile(
+                    floorCell + Vector3Int.down,
+                    bottomBorderTile
                 );
             }
         }
+       
+// =====================================================
+// PHASE 1B
+// =====================================================
+
+foreach (Vector3Int floorCell in bounds.allPositionsWithin)
+{
+    if (!floorTilemap.HasTile(floorCell))
+        continue;
+
+    // LEFT
+    Vector3Int leftCell = floorCell + Vector3Int.left;
+
+    if (!floorTilemap.HasTile(leftCell) &&
+        !frontWallTilemap.HasTile(leftCell) && !backWallTilemap.HasTile(leftCell))
+    {
+      frontWallTilemap.SetTile(leftCell, leftWallTile);
+      boundaryWallTilemap.SetTile(leftCell, leftBorderTile);
+    }
+
+    // RIGHT
+    Vector3Int rightCell = floorCell + Vector3Int.right;
+
+    if (!floorTilemap.HasTile(rightCell) &&
+        !frontWallTilemap.HasTile(rightCell) && !backWallTilemap.HasTile(rightCell))
+    {
+        frontWallTilemap.SetTile(rightCell, rightWallTile);
+        boundaryWallTilemap.SetTile(rightCell, rightBorderTile);
+    }
+}
+    
 
 
         // =====================================================
@@ -371,38 +397,69 @@ if (!floorTilemap.HasTile(
 
 
             // =================================================
-// OUTER TOP LEFT
+// OUTER TOP LEFT corner & gap wall
 // =================================================
 
 if (!floorTilemap.HasTile(up) &&
     !floorTilemap.HasTile(left))
 {
-    wallTilemap.SetTile(topLeft, topLeftCorner);
+   
+    backWallTilemap.SetTile(topLeft, topLeftCorner);
 
-    // Corner aur left wall ke beech ka gap fill karo
-    Vector3Int gapCell1 = floorCell + new Vector3Int(-1, 1, 0);
-    Vector3Int gapCell2 = floorCell + new Vector3Int(-1, 2, 0);
+    Vector3Int gapCell1 = floorCell + new Vector3Int(-1, 2, 0);
+    Vector3Int gapCell2 = floorCell + new Vector3Int(-1, 1, 0);
 
-    wallTilemap.SetTile(gapCell1, leftWallTile);
-    wallTilemap.SetTile(gapCell2, leftWallTile);
+    Vector3Int gapCell1Left = gapCell1 + Vector3Int.left;   // khaali check
+    bool gapCell1LeftIsEmpty = !floorTilemap.HasTile(gapCell1Left) && !backWallTilemap.HasTile(gapCell1Left);
+
+    if (gapCell1LeftIsEmpty)
+    {
+        backWallTilemap.SetTile(gapCell1, leftWallTile);
+    }
+
+    Vector3Int gapCell2Left = gapCell2 + Vector3Int.left;   // khaali check
+    bool leftIsEmpty = !floorTilemap.HasTile(gapCell2Left) && !backWallTilemap.HasTile(gapCell2Left);
+
+    if (leftIsEmpty)
+    {
+        frontWallTilemap.SetTile(gapCell2, leftWallTile);
+        boundaryWallTilemap.SetTile(gapCell2, leftBorderTile);
+        
+    }
+    
+
+    
  }
 
 
-// =================================================
-// OUTER TOP RIGHT
+     // =================================================
+// OUTER TOP RIGHT corner & gap wall
 // =================================================
 
 if (!floorTilemap.HasTile(up) &&
     !floorTilemap.HasTile(right))
 {
-    wallTilemap.SetTile(topRight, topRightCorner);
+    backWallTilemap.SetTile(topRight, topRightCorner);
 
-    // Corner aur right wall ke beech ka gap fill karo
-    Vector3Int gapCell1 = floorCell + new Vector3Int(1, 1, 0);
-    Vector3Int gapCell2 = floorCell + new Vector3Int(1, 2, 0);
+    Vector3Int gapCell1 = floorCell + new Vector3Int(1, 2, 0);
+    Vector3Int gapCell2 = floorCell + new Vector3Int(1, 1, 0);
 
-    wallTilemap.SetTile(gapCell1, rightWallTile);
-    wallTilemap.SetTile(gapCell2, rightWallTile);
+    Vector3Int gapCell1Right = gapCell1 + Vector3Int.right;   // khaali check
+    bool gapCell1RightIsEmpty = !floorTilemap.HasTile(gapCell1Right) && !backWallTilemap.HasTile(gapCell1Right);
+
+    if (gapCell1RightIsEmpty)
+    {
+        backWallTilemap.SetTile(gapCell1, rightWallTile);
+    }
+
+    Vector3Int gapCell2Right = gapCell2 + Vector3Int.right;   // khaali check
+    bool rightIsEmpty = !floorTilemap.HasTile(gapCell2Right) && !backWallTilemap.HasTile(gapCell2Right);
+
+    if (rightIsEmpty)
+    {
+        frontWallTilemap.SetTile(gapCell2, rightWallTile);
+        boundaryWallTilemap.SetTile(gapCell2, rightBorderTile);
+    }
 }
 
 
@@ -413,10 +470,11 @@ if (!floorTilemap.HasTile(up) &&
             if (!floorTilemap.HasTile(down) &&
                 !floorTilemap.HasTile(left))
             {
-                wallTilemap.SetTile(
+                frontWallTilemap.SetTile(
                     bottomLeft,
                     bottomLeftCorner
                 );
+                boundaryWallTilemap.SetTile(bottomLeft, bottomLeftOuterBorderCorner);
             }
 
 
@@ -427,10 +485,11 @@ if (!floorTilemap.HasTile(up) &&
             if (!floorTilemap.HasTile(down) &&
                 !floorTilemap.HasTile(right))
             {
-                wallTilemap.SetTile(
+                frontWallTilemap.SetTile(
                     bottomRight,
                     bottomRightCorner
                 );
+                boundaryWallTilemap.SetTile(bottomRight, bottomRightOuterBorderCorner);
             }
 // =================================================
 // INNER TOP LEFT
@@ -446,9 +505,9 @@ if (floorTilemap.HasTile(up) &&
     Vector3Int innerWallCell1 = floorCell + new Vector3Int(-1, 1, 0);
     Vector3Int innerWallCell2 = floorCell + new Vector3Int(-1, 2, 0);
 
-    wallTilemap.SetTile(cornerCell, innerTopLeftCorner);
-    wallTilemap.SetTile(innerWallCell1, topInnerWallTile);
-    wallTilemap.SetTile(innerWallCell2, topInnerWallTile);
+    backWallTilemap.SetTile(cornerCell, innerTopLeftCorner);
+    backWallTilemap.SetTile(innerWallCell1, topInnerWallTile);
+    backWallTilemap.SetTile(innerWallCell2, topInnerWallTile);
 }
 
 
@@ -466,9 +525,9 @@ if (floorTilemap.HasTile(up) &&
     Vector3Int innerWallCell1 = floorCell + new Vector3Int(1, 1, 0);
     Vector3Int innerWallCell2 = floorCell + new Vector3Int(1, 2, 0);
 
-    wallTilemap.SetTile(cornerCell, innerTopRightCorner);
-    wallTilemap.SetTile(innerWallCell1, topInnerWallTile);
-    wallTilemap.SetTile(innerWallCell2, topInnerWallTile);
+    backWallTilemap.SetTile(cornerCell, innerTopRightCorner);
+    backWallTilemap.SetTile(innerWallCell1, topInnerWallTile);
+    backWallTilemap.SetTile(innerWallCell2, topInnerWallTile);
 }
 
 
@@ -480,8 +539,9 @@ if (floorTilemap.HasTile(up) &&
                 floorTilemap.HasTile(left) &&
                 !floorTilemap.HasTile(bottomLeft))
             {
-                wallTilemap.SetTile(bottomLeft, innerBottomLeftCorner
+                frontWallTilemap.SetTile(bottomLeft, innerBottomLeftCorner
                     );
+                    boundaryWallTilemap.SetTile(bottomLeft, bottomLeftInnerBorderCorner);
             }
 
 
@@ -493,43 +553,15 @@ if (floorTilemap.HasTile(up) &&
                 floorTilemap.HasTile(right) &&
                 !floorTilemap.HasTile(bottomRight))
             {
-                wallTilemap.SetTile(
+                frontWallTilemap.SetTile(
                     bottomRight,
                     innerBottomRightCorner
                 );
+                boundaryWallTilemap.SetTile(bottomRight, bottomRightInnerBorderCorner);
             }
         }
-        }
 
 
-    // =========================================================
-    // WALL HELPER
-    // =========================================================
-
-    private void TryPlaceWall(
-        Vector3Int cell,
-        TileBase wall)
-    {
-        if (!floorTilemap.HasTile(cell))
-        {
-            wallTilemap.SetTile(
-                cell,
-                wall
-            );
-        }
     }
 
-
-    private void PlaceCorner(
-        Vector3Int cell,
-        TileBase corner)
-    {
-        if (!floorTilemap.HasTile(cell))
-        {
-            wallTilemap.SetTile(
-                cell,
-                corner
-            );
-        }
-    }
 }
